@@ -1,0 +1,31 @@
+.alan1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: pink;
+    z-index: 2;
+}
+
+span {
+    color: white;
+}
+
+.alan2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: darkgoldenrod;
+    margin-top: 50px;
+    margin-left: 50px;
+    z-index: 3;
+}
+
+.alan3 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: darkcyan;
+    margin-top: 100px;
+    margin-left: 100px;
+    z-index: 1;
+}

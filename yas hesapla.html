@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Yaş Hesaplama </title>
+
+
+</head>
+<body>
+
+    <input type="text" name="yas" id="u_yas" />
+
+    <button type="button" onclick="yashesapla()">Tıkla!</button>
+
+    <p id="yorum"></p>
+
+    <script>
+
+function yashesapla() {
+
+            var yas = parseInt(document.getElementById('u_yas').value);
+
+            if (yas < 18) {
+
+                document.getElementById('yorum').innerHTML = "Daha Gençsin!";
+            }
+
+            else {
+                document.getElementById('yorum').innerHTML = "Ehliyet Alabilirsin!!";
+            }
+}
+
+    </script>
+
+</body>
+</html>

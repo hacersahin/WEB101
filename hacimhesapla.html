@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hacim Hesaplama </title>
+
+
+</head>
+<body>
+
+    <p> yarıcap: <input type="text" name="çap" id="yaricap" /></p>
+    <p> yükseklik: <input type="text" name="yukseklik" id="yukseklik" /> </p>
+    <br />
+    <button type="button" onclick="hacimhesapla()">Hacim Hesapla!</button>
+    <p id="sonuc"></p>
+
+    <script>
+
+        function hacimhesapla() {
+
+            var cap = parseInt(document.getElementById('yaricap').value);
+            var yukseklik = parseInt(document.getElementById('yukseklik').value);
+            var pi = 3.14;
+            var hacim = (1 / 3) * pi * cap * cap * yukseklik;
+
+            document.getElementById('sonuc').innerHTML = "Girilen Değerlere Göre Hesaplanan Hacim: " + hacim;
+
+        }
+
+
+    </script>
+
+</body>
+</html>

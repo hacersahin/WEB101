@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Asal sayı Hesaplama </title>
+
+
+</head>
+<body>
+
+    <p> 0-100 aralığında bir sayı giriniz: <input type="text" name="sayi" id="num" /> </p>
+    <button type="button" onclick="asalKont()"> Kontrol et! </button>
+    <p id="sonuc"></p>
+
+    <script>
+        function asalKont() {
+        
+
+            var x = parseInt(document.getElementById('num').value);
+            if (x < 0 || x > 100) {
+                document.getElementById('sonuc').innerHTML = "Girdiğiniz sayı 0 ile 100 aralığında değil!";
+
+            }
+            else {
+                if (x % 2 == 0  & x != 2 || x % 3 == 0 & x != 3 || x % 5 == 0 & x != 5 || x % 7 == 0 & x != 7) {
+
+                    
+                        document.getElementById('sonuc').innerHTML = "Girdiğiniz sayı ASAL DEĞİLDİR!";
+                    
+                }
+                else {
+                    document.getElementById('sonuc').innerHTML = "Girdiğiniz sayı ASALDIR!";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

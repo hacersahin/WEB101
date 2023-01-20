@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>renk değiştir </title>
+
+    <style>
+        .class a1 {
+            background-color: yellow;
+            width: 100px;
+            height:50px;
+        }
+    </style>
+    <script>
+        function mouseUst(){
+
+            document.getElementById('div1').style.backgroundColor="green";
+            document.getElementById('yazi').inner.HTML="İçinde";
+            document.getElementById('yazi').style.color="red";
+
+        }
+
+        function mouseDis(){
+             document.getElementById('div1').style.backgroundColor="yellow";
+            document.getElementById('yazi').inner.HTML="Dışında";
+            document.getElementById('yazi').style.color="black";
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    <div class="a1" id="div1" onmouseover="mouseUst()" onmouseout="mouseDis()">
+
+        <p id="yazi">dışında</p>
+        
+    </div>
+
+</body>
+</html>

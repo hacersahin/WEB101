@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>event listener </title>
+    <style>
+        button {
+            width:200px;
+            height:100px;
+            margin:150px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button type="button" id="btn">TEST BUTTON</button>
+    <p id="yazi"></p>
+
+    <script>
+
+        var btn = document.getElementById('btn');
+
+        var yazi = document.getElementById('yazi');
+
+        btn.addEventListener("mouseover", f1);
+        btn.addEventListener("click", f2);
+        btn.addEventListener("mouseout", f3);
+        btn.addEventListener("mousedown", f4);
+        btn.addEventListener("mouseup", f5);
+
+        function f1() {
+            yazi.innerHTML += "mouse Üstünde <br/>" ;
+        }
+        function f2() {
+            yazi.innerHTML += "Tıklandı <br/>";
+        }
+        function f3() {
+            yazi.innerHTML += "mouse dışında <br/>";
+        }
+        function f4() {
+            yazi.innerHTML += "mouse aşağı <br/>";
+        }
+        function f5() {
+            yazi.innerHTML += "mouse yukarı <br/>";
+        }
+
+
+    </script>
+
+</body>
+</html>

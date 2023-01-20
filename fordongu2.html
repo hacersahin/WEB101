@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>For öngüsü ile faktöriyel hesabı </title>
+
+    <script>
+
+        /*kısa yol faktoriyel hesaplama*/
+
+        function fak(sayi) {
+
+            var sayi_fak = 1;
+            for (var i = 1; i <= sayi; i++) {
+                sayi = sayifak * i;
+            }
+            return sayi_fak;
+        }
+
+       
+       ///* uzun yol faktöriyel hesaplama*/
+
+        function faktoriyelhesapla() {
+            var m = document.getElementById('m_input').value;
+            var n = document.getElementById('n_input').value;
+            var m_fak = 1;
+            var n_fak = 1;
+            var mn_fak = 1;
+
+            for (var i = 1; i <= m; i++) {
+
+                m_fak= m_fak * i;
+            }
+            for (var j = 1; j<= n; j++) {
+
+                n_fak = n_fak * j;
+            }
+            for (var k = 1; k <= m - n; k++) {
+
+                mn_fak = mn_fak * k;
+            }
+            var sonuc = m_fak / (n_fak * mn_fak);
+            document.getElementById('sonuc_yazi').innerHTML = sonuc;
+        }
+        
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <h1> faktöriyel Hesabı yapma </h1>
+    <p> m: <input type="number" id="m_input" /> </p> 
+    <p> n: <input type="number" id="n_input" /> </p>
+    <br />
+    <button type="button" onclick=" faktoriyelhesapla()">Hesapla</button>
+    <p id="sonuc_yazi"> </p>
+
+
+
+
+
+</body>
+</html>
