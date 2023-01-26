@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Bootstrap101 </title>
+    <title>anasayfa </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5ca372acc9.js" crossorigin="anonymous"></script>
@@ -29,12 +29,14 @@
                     <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Ara..." aria-label="Search">
                 </form>
 
-                <div class="text-end">
+                <div class="text-end" id="heder_sag">
                     <div id="dv_btn "
-                    <button type="button" class="btn btn-outline-light me-2">Giriş</button>
-                   <a href="kayit_sayfasi.html" <button type="button" class="btn btn-warning">Kaydol</button> </a>
+                        <a href="giris2.html"><button type="button" class="btn btn-outline-light me-2">Giriş</button> </a>
+                        <a href="formsayfasi.html" <button type="button" class="btn btn-warning">Kaydol</button> </a>
                    </div>
-                    <button type="button" class="btn btn-denger> Çıkış</button>
+                </div>
+                <div class="text-end">
+                    <button id="logout_Btn" type="button" class="btn btn-danger" style="display:none" onclick="logout()">Çıkış</button>
                 </div>
             </div>
         </div>
@@ -66,7 +68,7 @@
                         <h3 class="fs-2">Programlama</h3>
                         <p>C# ile nesne yönelimli programlama öğrenim devam etmektedir..</p>
                         <a href="#" class="icon-link d-inline-flex align-items-center">
-                           Tıkla
+                            Tıkla
                             <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
                         </a>
                     </div>
@@ -163,7 +165,7 @@
                         </tr>
                         <tr>
                             <td>
-                               Bootstrap
+                                Bootstrap
                             </td>
                             <td>
                                 26 saat
@@ -174,7 +176,7 @@
                         </tr>
                     </table>
                 </div>
-                
+
             </div>
 
 
