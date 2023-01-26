@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>kayıt</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1e455baf92.js" crossorigin="anonymous"></script>
+
+    <script>function sifre_kontrol(){
+
+            var kullanici = [(document.getElementById("email").value), (document.getElementById("sifre1").value)];
+
+            var mail = document.getElementById("email").value;
+            var sifre1 = document.getElementById("sifre1").value;
+            var sifre2 = document.getElementById("sifre2").value;
+            var yazi = document.getElementById("sonuc");
+
+            if (kullanici[1]==sifre1) {
+
+                yazi.innerHTML = "Hesaba giriş sağlandı!";
+
+                yazi.style.color = "green";
+
+                sessionStorage.setItem("user", kullanici); //içeriye bilgi gönderiyoruz. her yerden görülür.
+
+
+            }
+
+            else {
+
+                yazi.innerHTML = "Şifreler eşleşmiyor";
+
+                yazi.style.color = "red";
+            }
+        }</script>
+
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <i class="fa-thin fa-pen-nib"></i>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Anasayfa</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Öğrendiklerim</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Öğreneceklerim</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white"> Tekrar Etmem Gerekenler</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Ben Kimim?</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Ara..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <a href="girissayfasi.html"> <button type="button" class="btn btn-outline-light me-2">Giriş</button></a>
+                    <a href="anasayfa.html" <button type="button" class="btn btn-warning">Kaydol</button> </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br />
+    <main class="form-signin w-100 m-auto">
+        <div class="row justify-content-center">
+            <div class="col-6 text-center ">
+                <form>
+                    <img class="mb-4" src="C:\Users\khas\Desktop\web1\web1\resim\kedi.jpeg" alt="" width="200" height="150">
+                    <h1 class="h3 mb-3 fw-normal text-center">Hesap Oluştur</h1>
+
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="floatingInput">E-mail adres</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="sifre1" placeholder="password">
+                        <label for="floatingPassword">Şifre</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="sifre2" placeholder="RePassword">
+                        <label for="floatingPassword">Şifre Tekrar</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Anımsa
+                        </label>
+                        <p id="sonuc"></p>
+                    </div>
+
+                </form>
+
+
+                <button class="w-100 btn btn-lg btn-primary" onclick="sifre_kontrol()">Kaydet</button>
+
+                <p id="sonuc"> </p>
+
+                <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
