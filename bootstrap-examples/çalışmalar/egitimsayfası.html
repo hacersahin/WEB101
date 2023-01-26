@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap101 </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5ca372acc9.js" crossorigin="anonymous"></script>
+
+    <script>
+        function ders_topla() {
+            var secim = document.getElementById("sec");
+            var secim_deger = parseInt(secim.value);
+            var liste = document.getElementById("ders_list");
+            var toplam = parseInt(document.getElementById("toplam").innerHTML);
+            switch (secim_deger){
+                case 30:
+                    liste.innerHTML += "<li>C#</li>";
+                    toplam += 30;
+                    document.getElementById("toplam").innerHTML = toplam;
+                    break;
+                case 25:
+                    liste.innerHTML += "<li> HTML-CSS</li>";
+                    toplam += 25;
+                    document.getElementById("toplam").innerHTML = toplam;
+                    break;
+                case 17:
+                    liste.innerHTML += "<li>JAVASCRİPT</li>";
+                    toplam += 17;
+                    document.getElementById("toplam").innerHTML = toplam;
+                    break;
+                case 8:
+                    liste.innerHTML += "<li>BOOTSTRAP</li>";
+                    toplam += 8;
+                    document.getElementById("toplam").innerHTML = toplam;
+                    break;
+            }
+
+        }
+       
+    </script>
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <i class="fa-thin fa-pen-nib"></i>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Anasayfa</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Öğrendiklerim</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Öğreneceklerim</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white"> Tekrar Etmem Gerekenler</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Ben Kimim?</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Ara..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Giriş</button>
+                    <a href="kayit_sayfasi.html" <button type="button" class="btn btn-warning">Kaydol</button> </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row justify-content-center">
+        <form>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                                <h2>Ders seçiniz:</h2>
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="sec">
+                                    <option selected></option>
+                                    <option value="30">C#</option>
+                                    <option value="25">HTML-CSS</option>
+                                    <option value="17">JAVASCRİT</option>
+                                    <option value="8">Bootstrap</option>
+                                </select>
+                        </div>
+                        <div class="row py-2">
+                             <button type="button" class="btn" onclick="ders_topla()">Ders Ekle</button>
+                        </div>
+                        <div class="row py-2">
+                              <p>Toplam saat= <span id="toplam">0</span></p>     
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <h2> Seçilen dersler: </h2>
+                            <div class="row px-5">
+                                <ul id="ders_list">
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <hr class="featurette-divider">
+    <div>
+        <footer class="container">
+            <div class="row">
+                <div class="col-8 mb-3">
+                    <h5>Site İçeriği</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Anasayfa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Öğrendiklerim</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Öğreneceklerim</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tekrar Etmem Gerekenler</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ben Kimim?</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 mb-3">
+                    <form class="float-end">
+                        <h5>Eğitim sürecinden haberdar Ol!</h5>
+                        <p>Aylık özet için; </p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Kaydet!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2023 Hacer Şahin.</p>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

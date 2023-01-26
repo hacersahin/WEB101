@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Diler 1</title>
+
+    
+
+
+
+</head>
+<body>
+
+
+    <span id="yazi"> </span>
+
+
+    <script>
+
+        var dizi = ["ocak", "şubat", "mart","haziran"];
+       
+        dizi.push("nisan"); /*diziye eleman ekleme push ile yapılır*/
+
+        alert(dizi[1]);
+
+        var uzunluk = dizi.length; /*dizinin uzunluğunu yazar*/
+
+        //alert(uzunluk);
+
+        //for (var i = 0; i < dizi.length; i++) {
+        //    alert(dizi[i]);
+        //}
+
+        /* dizinin bütün elemanlarını liste olarak yazdırmak için:*/
+
+        var list = "<ul>";
+
+        dizi.forEach(liste_yazdir);
+
+        list += "</ul>";
+
+        //alert(list);
+
+        document.getElementById("yazi").innerHTML = list;
+
+
+        function liste_yazdir(eleman) {
+
+            list += "<li>" + eleman + "</li>";
+
+        }
+
+    </script>
+
+
+
+</body>               
+                  
+</html>                                 
