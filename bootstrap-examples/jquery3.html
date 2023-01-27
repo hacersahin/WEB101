@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+$(document).ready(function () {
+
+            /*  document.getelementById("myId").styl.backgraund-color="yellow"*/ //jscriptte de
+
+            $('*').css("background-color", "orange");
+    Z ('p').css("background-color", "pink");
+            $('#myId').css({ "background-color": "yellow", "font-size": 40 });
+            $('.myClass').css("background-color", "blue");
+            $('h4.myClass').css("background-color", "gray");
+            $("p[name='myName']").css("background-color", "green");
+            //$ ("h4,li").css("background-color", "green");
+            //$('li:eq(2)').css("background-color","purple");
+            //$('li:lt(3)').css("background-color","purple");
+            //$('li:gt(1)').css("background-color","purple");
+            $('li:contains(muz)').css("background-color", "purple"); //içnde muz geçen herşeyi boyar .
+
+
+});
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <p class="myClass">Bu paragraf class' a sahip</p>
+    <h4 class="myClass"> bu başlık myClass a sahip</h4>
+    <p id="myId">Bu paragraf id' e sahip</p>
+    <p> bu paragraf id' siz ve class' sız</p>
+    <p name="myName">Bu Paragraf isme sahip.</p>
+    <ul>
+        <li>elma</li>
+        <li>armut</li>
+        <li>kiraz</li>
+        <li>şeftali</li>
+        <li>muz</li>
+        <li>karpuz</li>
+    </ul>
+
+</body>
+</html>
