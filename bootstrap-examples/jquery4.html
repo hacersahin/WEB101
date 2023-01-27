@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery örnek çalışma</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        function goz_kirp() {
+            $('.blink').fadeOut(500);
+            $('.blink').fadeIn(500);
+            $('.blink').css("background-color", "orange");
+
+
+        }
+        function geri_don() {
+
+            $('.blink').css("color", "red");
+        }
+
+        $(document).ready(function () {
+
+            $('p').css("font-size", 32);
+
+            $('.blink').click(function () {
+
+                goz_kirp()
+
+                setTimeout(geri_don(), 1000);
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <p> bu <span class="blink">yazı göz</span> kırpıyor.</p>
+
+</body>
+</html>
