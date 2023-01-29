@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charser="utf-8" />
+  
+   
+</head>
+<body >
+
+
+    <!--HTML tablosunda iki tür hücre vardýr:
+
+     Üstbilgi hücreleri - baþlýk bilgilerini içerir (<th> öðesiyle oluþturulur)
+     Veri hücreleri - veri içerir (<td> öðesiyle oluþturulur)-->
+
+            <table border="1px solid gray" align="center" bgcolor="iceblue">
+                <caption>Öðrenci Kimlik Kartý</caption>
+                <tr>
+                    <th colspan="3">Okul Adý</th>
+                    <th>gg/aa/yy</th>
+
+                </tr>
+                <tr>
+                    <!--span, bir
+                    <col> öðesinin kapsamasý gereken sütun sayýsýný tanýmlar.-->
+
+                    <td colspan="2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWXmO6Pfqy478CdHiNuNQhXimVFJHTSG-BZg&usqp=CAU" width="150px" height="100px" /></td>
+                    <td colspan="2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrI6QKY3MPbgdmChGt2X264EtMVKohQ-76ig&usqp=CAU" width="200px" height="100px"</td>
+                </tr>
+                <tr>
+                    <th>Ad-Soyad</th>
+                    <th>Cinsiyet</th>
+                    <th>Fakülte</th>
+                    <th>Bölüm</th>
+                </tr>
+                <tr>
+                    <!--Rowspan özelliði satýr üzerinde kaç tane hücrenin birleþtirileceðini belirtir.-->
+                    <td> Hacer </td>
+                    <td rowspan="2">Kadýn</td>
+                    <td rowspan="2">Hukuk Fakültesi</td>
+                    <td rowspan="2">Hukuk</td>
+                </tr>
+                <tr>
+                    <td>Þahin</td>
+                </tr>
+            </table>
+
+
+</body>
+</html>
