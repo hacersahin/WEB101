@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>XML example</title>
+
+    <script>
+
+        var text = "<arabalar>" +
+            "<araba>" +
+                "<name>bmw</name>" +
+                "<model>3.22</model>" +
+                "<yil>2008</yil>" +
+            "</araba>" +
+            "<araba>" +
+                "<name>opel</name>" +
+                "<model>vectra</model>" +
+                "<yil>2000</yil>" +
+            "</araba>" +
+            "<araba>" +
+                "<name>renault</name>" +
+                "<model>207</model>" +
+                "<yil>2007</yil>" +
+            "</araba>" +
+            "</arabalar>";
+
+      
+        var parser = new DOMParser();
+
+        var arabaXML = parser.parseFromString(text,"text/xml");
+
+        console.log(arabaXML.getElementsByTagName('araba')[1].childNodes[0].innerHTML);
+
+
+        //ilk ve ikinci aracın yılları toplamı;
+
+        var yil1 = parseInt(arabaXML.getElementsByTagName('araba')[1].childNodes[2].innerHTML);
+        var yil2 = parseInt(arabaXML.getElementsByTagName('araba')[0].childNodes[2].innerHTML);
+
+        console.log(yil1 + yil2);
+            
+        //2.yol
+        //console.log(parseInt(arabaXML.getElementsByTagName('araba')[1].childNodes[2].innerHTML) + parseInt(arabaXML.getElementsByTagName('araba')[0].childNodes[2].innerHTML));
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

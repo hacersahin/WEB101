@@ -1,0 +1,102 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#btn').click(function () {
+
+
+                $('#yazi').html("<b>Burası bold --</b>-- Burası bold değil");
+
+            });
+
+            $('#goster').click(function () {
+
+                $('#yazi').show(1000);
+
+            });
+
+            $('#gizle').click(function () {
+
+                $('#yazi').hide(1000);
+
+            });
+
+
+            $('#yazi').hover(
+                function () {
+
+                    $('#yazi').css("background-color", "pink");
+                },
+
+                function () {
+
+                    $('#yazi').css("background-color", "purple");
+
+                });
+
+            $('#input_alani').focus(function () {
+
+                $('#input_alani').css("background-color", "yellow");
+
+            });
+
+            $('#input_alani').blur(function () {
+
+                $('#input_alani').css("background-color", "white");
+
+            });
+
+            $('#yazi2').on({
+
+                mouseenter: function () {
+
+                    $('#yazi2').css("background-color", "lightblue");
+                },
+
+                mouseleave: function () {
+
+                    $('#yazi2').css("background-color", "lightgray");
+                },
+
+                click: function () {
+
+                    $('#yazi2').css("font-size", 32);
+                },
+
+                dblclick: function () {
+                    $('#yazi2').css("font-size", 8);
+                }
+
+
+            });
+
+
+        });
+
+    </script>
+</head>
+<body>
+
+
+    <p id="yazi">Hello world</p>
+
+    <button id="btn">içeriği değiştir </button>
+    <button id="goster">göster </button>
+    <button id="gizle"> gizle</button>
+
+    <p>Name: </p>
+    <input type="text" id="input_alani" />
+
+    <p id="yazi2">Bu paragraf birçok işlemi kombine ederek çalışır. </p>
+
+</body>
+</html>

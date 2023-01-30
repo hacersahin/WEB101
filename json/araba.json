@@ -1,0 +1,25 @@
+{
+    "arabalar": [
+
+
+        {
+            "name": "bmw",
+            "model": "3.22",
+            "yil": "2008"
+        },
+        {
+            "name": "opel",
+            "model": "vectra",
+            "yil": "2000"
+        },
+        {
+            "name": "renault",
+            "model": "207",
+            "yil": "2004"
+        }
+
+    ]
+}
+
+
+<arabalar>

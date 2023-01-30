@@ -1,0 +1,44 @@
+
+<calisanlar>
+	<calisan>
+		<Adı>Ali</Adı>
+		<soyadı>veli</soyadı>
+	</calisan>
+	<calisan>
+		<Adı>Gül</Adı>
+		<soyadı>veli</soyadı>
+	</calisan>
+	<calisan>
+		<Adı>Hasan</Adı>
+		<soyadı>veli</soyadı>
+	</calisan>
+	<calisan>
+		<Adı>Murat</Adı>
+		<soyadı>veli</soyadı>
+	</calisan>
+	<calisan>
+		<Adı>Nalan</Adı>
+		<soyadı>Sert</soyadı>
+	</calisan>
+</calisanlar>
+
+
+<arabalar>
+	
+	<araba>
+		<name>bmw</name>
+		<model>3.22</model>
+		<yil>2008</yil>
+	</araba>
+	<araba>
+		<name>opel</name>
+		<model>vectra</model>
+		<yil>2000</yil>
+	</araba>
+	<araba>
+		<name>renault</name>
+		<model>207</model>
+		<yil>2007</yil>
+	</araba>
+	
+</arabalar>
