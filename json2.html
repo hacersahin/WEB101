@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>json example2</title>
+
+    <script>
+
+        var text = '{"adi":"hacer", "yas":"33", "sehir":"istanbul", "dogum_gunu":"function() {return 2023-this.yas;}"}';
+
+        var kisi = JSON.parse(text);
+
+        kisi.dogum_gunu = eval("(" + kisi.dogum_gunu + ")");
+
+        console.log(kisi.adi);
+        console.log(kisi.dogum_gunu());
+//////////////////////////////////////////////////////////////////////////////////////////////////
+        var otopark = [
+
+            {
+                adi: "opel",
+                model: "vectra",
+                agirlik: 1200,
+                yil: 2000,
+                renk: "mavi",
+                suan_hiz: 0,
+                km_saat: 0,
+                fren_mesafesi: function () {
+                    return (this.suan_hiz / this.agirlik) * 100;
+                },
+                calisma_durumu: false,
+                tam_ad: function () {
+                    return this.adi + " " + this.model;
+                }
+
+            },
+            {
+                adi: "bmw",
+                model: "3.22",
+                agirlik: 1300,
+                yil: 2008,
+                renk: "siyah",
+                suan_hiz: 0,
+                km_saat: 0,
+                fren_mesafesi: function () {
+                    return (this.suan_hiz / this.agirlik) * 100;
+                },
+                calisma_durumu: false,
+                tam_ad: function () {
+                    return this.adi + " " + this.model;
+
+                }
+            }
+        ];
+
+        console.log(otopark);
+
+        var otopark_JSON = JSON.stringify(otopark);
+
+        console.log(otopark_JSON);
+
+    </script>
+</head>
+
+<body>
+
+
+
+
+</body>
+</html>

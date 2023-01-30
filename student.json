@@ -1,0 +1,43 @@
+﻿{
+
+  "Student": [
+
+    {
+      "Roll_no": 1,
+      "student_name": "Ali",
+      "age": 18,
+      "Branc_id":"10"
+
+    },
+    {
+      "Roll_no": 1,
+      "student_name": "Ayşe",
+      "age": 17,
+      "Branc_id": "10"
+
+    },
+    {
+      "Roll_no": 1,
+      "student_name": "Mert",
+      "age": 20,
+      "Branc_id": "12"
+
+    },
+    {
+      "Roll_no": 1,
+      "student_name": "Gül",
+      "age": 18,
+      "Branc_id": "11"
+
+    },
+    {
+      "Roll_no": 1,
+      "student_name": "Ali",
+      "age": 18,
+      "Branc_id":"12"
+
+    }
+
+  ]
+
+}
