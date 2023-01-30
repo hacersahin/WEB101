@@ -19,8 +19,8 @@
 
             kullanici_adi: "av.hacer@outlook.com.tr",
             sifre: "12345632",
-            olusturma_tarihi:"02/01/2020"
-            }
+            olusturma_tarihi: "02/01/2020"
+        }
 
         alert(kisi.isim); //ekrana kisi ismi yazdırıyoruz.
 
@@ -38,17 +38,24 @@
             yil: 2000,
             renk: "mavi",
             suan_hiz: 0,
+            km_saat: 0,   
             fren_mesafesi: function () {
                 return (this.suan_hiz / this.agirlik) * 100;
             },
-            calisma_durumu:false,
+            calisma_durumu: false,
             tam_ad: function () {
                 return this.adi + " " + this.model;
-            }
+            },
+           
         };
 
 
         function start(a) {
+
+            if (a.calisma_durumu == true) {
+
+                console.log(a.tam_ad() + " " + "zaten çalışıyor")
+            }
 
             console.log(a.tam_ad() + " " + "çalıştı!");
             a.calisma_durumu = true;
@@ -56,38 +63,80 @@
         };
         function hizlandir(a) {
 
-            var x = parseInt(document.getElementById("hiz").value);
-            
-            a.suan_hiz += x;
-            console.log(a.tam_ad()+" "+ x+ " " + "çalıştı!")
+            if (a.calisma_durumu == false) {
+
+                console.log(a.tam_ad() + " " + "motor şu anda çalışmıyor")
+            }
+            else {
+                var x = parseInt(document.getElementById("hiz").value);
+
+                a.suan_hiz += x;
+                console.log(a.tam_ad() + " " + x + " " + "km/h kadar hızlandı!")
+            }
 
         };
         function fren(a) {
+            if (a.calisma_durumu == false || a.suan_hiz == 0) {
 
-            var x = parseInt(document.getElementById("fren").value);
-          
-            console.log(a.tam_ad() + " " + "fren yaptı!");
-            if (x > a.fren_mesafesi()) {
-                console.log(a.tam_ad() + " " + "güvenli şekilde durabildi!");
+                console.log(a.tam_ad() + " " + "araba zaten hareket etmiyor.")
+
+            }
+            else {
+                var x = parseInt(document.getElementById("fren").value);
+
+                console.log(a.tam_ad() + " " + "fren yaptı!");
+
+
+                if (x > a.fren_mesafesi()) {
+                    console.log(a.tam_ad() + " " + "güvenli şekilde durabildi!");
+                    a.suan_hiz = 0;
+
+                }
+                else {
+
+                    console.log("Geçmiş olsun!");
+                    a.suan_hiz = 0;
+                }
+
+
+            }
+        };
+        function stop(a) {
+
+            if (a.calisma_durumu == false) {
+                console.log(a.tam_ad() + " " + "araba zaten çalışmıyor.")
+            }
+            else {
+                console.log(a.tam_ad() + " " + "durduruldu!");
+                a.calisma_durumu = false;
                 a.suan_hiz = 0;
+            }
+        };
+
+        function bilgi_al(a) {
+
+            console.log(a);
+
+        };
+        function git(a) {
+
+            if (a.calisma_durumu == false || a.suan_hiz == 0) {
+                console.log(a.tam_ad() + " " + "araba duruyor!")
 
             }
             else {
 
-                console.log("Geçmiş olsun!");
-                a.suan_hiz = 0;
+                var saat = parseInt(document.getElementById("git_saat").value);
+
+                var yol = a.suan_hiz * saat;
+
+                console.log(a.tam_ad() + " " + saat + " " + "saate" +" "+ yol + "  " + "km yol aldı!")
+
+                a.km_saat += yol;
             }
-
         };
-        function stop(a) {
 
-            console.log(a.tam_ad() + " " + "durduruldu!");
-            a.calisma_durumu= false;
-        }
 
-        function bilgi_al(a) {
-            console.log(a);
-        }
 
 
     </script>
@@ -114,7 +163,12 @@
     <button type="button" onclick="stop(araba)">Motoru Durdur!</button>
     <br /><br />
     <button type="button" onclick="bilgi_al(araba)">Bilgi Al</button>
+    <br /><br />
 
+    <span>saat: </span>
+    <br /><br />
+    <input type="number" id="git_saat" />
+    <button type="button" onclick="git(araba)"> git!</button>
 
 
 </body>
