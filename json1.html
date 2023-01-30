@@ -1,0 +1,105 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JSON Example</title>
+
+
+    <script>
+
+        //kişi objesi oluşturalım
+
+        var kisi = {
+
+            isim: "Hacer",
+            yas: 33,
+            sehir: "istanbul",
+        };
+
+        var kullanıcı = {
+
+            kullanici_adi: "av.hacer@outlook.com.tr",
+            sifre: "12345632",
+            olusturma_tarihi:"02/01/2020"
+            }
+
+        alert(kisi.isim); //ekrana kisi ismi yazdırıyoruz.
+
+
+        alert(kullanıcı.kullanici_adi + "," + kisi.isim); //ekrana kullanıcı dını ve kişi adını yazdırıyoruz
+
+
+        //araba objesi oluşturalım:
+
+        var araba = {
+
+            adi: "opel",
+            model: "vectra",
+            agirligi: 1200,
+            yil: 2000,
+            renk: "mavi",
+            suan_hiz: 0,
+            fren_mesafesi: (suan_hiz / agirlik) * 100,
+            çalisma_durumu: false
+            tam_ad: function () {
+                return this.adi + " " + this.model;
+            }
+        };
+
+
+        function start(a) {
+            console.log(a.tam_ad + "çalıştı!");
+            a.calisma_durumu = true;
+
+
+        };
+        function hizlandir(x, a) {
+            a.suan_hiz += x;
+            console.log(a.tam_ad+" "+ x+ "çalıştı!")
+
+        };
+        function fren(a,x) {
+          
+            console.log(a.tam_ad + "fren yaptı!");
+            if (x > a.frem_mesafesi) {
+                console.log(a.tam_ad + "güvenli şekilde durabildi!");
+                a.suan_hiz = 0;
+
+            }
+            else {
+                console.log("Geçmiş olsun!");
+                a.suan_hiz = 0;
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
