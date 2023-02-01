@@ -1,0 +1,196 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap Exercise 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/df4ff89c1f.js" crossorigin="anonymous"></script>
+
+    <script src="session.js"></script>
+
+
+
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="bootstrap_exp_site.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <i class="fa-solid fa-compass-drafting fa-2xl"></i>
+
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="bootstrap_exp_site.html" class="nav-link px-2 text-secondary">Ana Sayfa</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Eğitimler</a></li>
+                    <li><a href="bootstrap_form.html" class="nav-link px-2 text-white">Hemen Başvur</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">S.S.S.</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Hakkımızda</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Ara..." aria-label="Search">
+                </form>
+
+                <div class="text-end" id="header_sag">
+                    <div id="btn_div">
+                        <a href="signin_page.html"><button type="button" class="btn btn-outline-light me-2">Giriş</button></a>
+                        <a href="signup_page.html"><button type="button" class="btn btn-warning">Kayıt Ol</button></a>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button id="logout_Btn" type="button" class="btn btn-danger" style="display:none" onclick="logout()">Çıkış</button>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <hr />
+    <div class="px-4 py-5 my-5 text-center">
+        <i class="fa-solid fa-shield-halved fa-9x"></i>
+        <h1 class="display-5 fw-bold">IBB 100 Kadın Yazılımcı Hey be!</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">IBB bünyesinde tasarlanmış olan <b>100 Kadın Yazılımcı Eğitimi</b> programında zorlu şartlar altında seçilmiş 100 kadın öğrencimize 4 ay süre boyunca programlama temelleri, giriş seviyesinde ve gelişmiş yöntemler öğretilmektedir.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Eğitimler</button>
+                <a href="bootstrap_form.html"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Başvur</button></a>
+            </div>
+        </div>
+    </div>
+    <hr 7 />
+    <div class="row">
+        <div class="col-8">
+
+            <div class="container px-4 py-5" id="featured-3">
+                <h2 class="pb-2 border-bottom">Ana Eğitim Başlıkları</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="feature col">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <h3 class="fs-2">Nesne Yönelimli Programlama</h3>
+                        <p>C# ile giriş ve nesne yönelimli programlama içeriğinde programlama temelleri eğitimi</p>
+                        <a href="#" class="icon-link d-inline-flex align-items-center">
+                            <br />İçeriği Gör
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="fs-2">Front-End Geliştirme <br /><br /></h3>
+                        
+                        <p>HTML - CSS - JavaScript giriş dilleri ile birlikte BootStrap yapısı, Jquery ve XML ile çalışma şekilleri üzerine eğitim</p>
+                        <a href="#" class="icon-link d-inline-flex align-items-center">
+                            İçeriği Gör
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <h3 class="fs-2">Back-End Geliştirme <br /> <br /></h3>
+                        <p>ASP.Net, React, Node.js gibi geliştirme dilleri üzerine eğitim</p>
+                        <a href="#" class="icon-link d-inline-flex align-items-center">
+                            <br /><br />İçeriği Gör
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-4">
+            <div class="row py-5">
+                <div class="col-12 border-bottom">
+                    <h2 class="">Eğitim Kadrosu</h2>
+                </div>
+            </div>
+
+            <div class="row py-5">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            <th>İş</th>
+                        </tr>
+                        <tr>
+                            <td>Mert</td>
+                            <td>Ecevit</td>
+                            <td>Lecturer</td>
+                        </tr>
+                        <tr>
+                            <td>Ebru</td>
+                            <td>Dilan</td>
+                            <td>Lecturer</td>
+                        </tr>
+                        <tr>
+                            <td>Hasan</td>
+                            <td>Dağ</td>
+                            <td>Administrator</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+    <hr />
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <h5>Menü</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="bootstrap_exp_site.html" class="nav-link p-0 text-muted">Ana Sayfa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Eğitimler</a></li>
+                        <li class="nav-item mb-2"><a href="bootstrap_form.html" class="nav-link p-0 text-muted">Hemen Başvur</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">S.S.S.</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hakkımızda</a></li>
+                    </ul>
+                </div>
+
+                
+
+                
+
+                <div class="col-8 mb-3">
+                    <form>
+                        <h5>Size ulaşmamızı ister misiniz?</h5>
+                        <p>Mail adresinizi bizimle paylaşarak size ulaşmamız için istek oluşturabilirsiniz.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button" style="width: 120px">Bana Ulaş</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2023 100KY, Tüm hakları saklıdır.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter" /></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram" /></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook" /></svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        checkLogin();
+
+    </script>
+</body>
+</html>

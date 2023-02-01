@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dizi Örneği</title>
+
+
+</head>
+<body>
+
+    <span id="yazi"></span>
+
+
+
+    <script>
+
+        var dizi = ["Ocak", "Şubat", "Mart"];
+
+        dizi.push("Nisan");
+
+        var uzunluk = dizi.length;
+
+
+        var list = "<ul>";
+
+        dizi.forEach(liste_yazdir);
+
+        list += "</ul>";
+
+
+        document.getElementById("yazi").innerHTML = list;
+
+
+
+
+
+        function liste_yazdir(eleman) {
+
+            list += "<li>" + eleman + "</li>";
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script>
+      const chicken = document.querySelector("#chicken");
+      
+      chicken.addEventListener("mouseover", function() {
+        chicken.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+        chicken.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+      });
+    </script>
+  </head>
+  <body>
+    <img id="chicken" src="https://img-s1.onedio.com/id-58d12e0e42a43de80e244e5d/rev-0/w-620/f-jpg/s-2663a63be0a17f849886b8101e058950aef8cb24.jpg" white="100" height="100" style="position: absolute;">
+  </body>
+</html>
