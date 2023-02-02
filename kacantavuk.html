@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Yakalanamayan Tavuk</title>
+
+    <style>
+
+        #tavuk {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+         
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+    <input id="tavuk" type="image" src="https://st.depositphotos.com/1724125/2695/v/600/depositphotos_26956223-stock-illustration-scared-cartoon-chicken.jpg" value="submit" width="100px"> </input>
+
+
+    <script>
+
+        var tavuk = document.getElementById("tavuk");
+        var sayac = 0;
+
+        tavuk.onmouseover = function () {
+            sayac++
+            var xeksen = parseInt(Math.random() * 1000);  //tavuk rastgele biryerde belirmesi için random kullanıyoruz.
+            var yeksen = parseInt(Math.random() * 800);
+            tavuk.style.left = xeksen + "px";
+            tavuk.style.top = yeksen + "px";
+            tavuk.style.width = this.clienWidth + 10 + "px";
+            tavuk.style.heigth = this.clienHeigth + 10 + "px";
+        }
+
+        tavuk.onclick = function () {
+            alert(sayac + "seferde Yakalama");
+            tavuk.style.width = "100px";
+            tavuk.style.height = "100px";
+            sayac = 0;
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>
+
+
+
