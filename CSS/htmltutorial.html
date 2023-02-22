@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ve inputs</title>
+</head>
+<body>
+   <form>
+       <label for="name">Name: </label> <br/>  
+       <!-- label kullanmamızın amacı Name tıklandığında doğrudan input alanına göndermesi  için  -->
+        <input type="text" name="name" id="name" placeholder="name"/><br/>
+        <label for="email">Email: </label><br/>
+        <input type="email" name="email" id="email" placeholder="email"/><br/>
+        <label for="password">Password: </label><br/>
+        <input type="password" name="password" id="password"/><br/>
+        <label for="date">Date: </label> <br/>
+        <input type="date" id="date" name="date"/><br/>
+
+        <!-- cinsiyet -->
+        Gender <br/> 
+        Male
+        <input type="radio" name="gender" value="male" checked/><br/> 
+        
+        <!-- checked sayfa yenilendiğinde otomatik olarak işaretli olmasını sağlayan bir özelliktir -->
+        Female
+        <input type="radio" name="gender" value="female"/><br/>
+        Other
+        <input type="radio" name="gender" value="other"/><br/>
+
+        <strong>Hobbies</strong> <br/>
+        Technology
+        <input type="checkbox" name="tech" id="tech"/>
+        Music
+        <input type="checkbox" name="music" id="music"/>
+        Books
+        <input type="checkbox" name="book" id="book"/> <br/>
+
+
+
+        Degree<!-- Degree  eğitim derecesi --> <br>
+        <select name="degree" id="degree">
+            <option value="bachelor">Lisans</option>
+            <option value="msc">Yüksek Lisans</option>
+            <option value="phd" selected>Doktora</option> 
+        </select> <br>
+            <!-- selected koyduğumuz zaman sayfayı her yenilemeizde o secenek yer alacak -->
+
+        <textarea name="message" id="message" rows="10" cols="30" placeholder="Your message..."></textarea> <br/>
+        <!-- rows="10" cols="30" ile textarea büyüklüğünü ayarlayabiliyoruz ksatır ve sütün eklebiliyoruz -->
+        <!-- placeholder:yer tutucu olarak tabir edebiliriz. geçici yazı gibi. inputlara daeklenebilir -->
+
+        
+
+
+        
+        <button type="reset">Sıfırla</button>
+        <input type="submit" value="Gönder"/>
+
+   </form>
+</body>
+</html>

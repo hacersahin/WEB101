@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Selctors</title>
+    <style>
+        h1{
+            color: yellow;
+            background:blueviolet;
+        }
+        p{
+           background:wheat;
+            color: rebeccapurple;
+        }
+
+        /* ortak özellikleri vermek için bu şekilde yazarız;
+        h1,p{
+            color: red;
+            background:yellowgreen;
+        } */
+
+        /* id seçimi;
+        #logo{
+
+        } 
+        //////////////////////
+        class secimi
+        .info{
+        }
+        */
+        /* a{
+            text-decoration:none;
+        } */
+        ul li a {
+            text-decoration:none;
+        }
+        .info span {
+            color: red;
+        }
+        /* tümünü seçmek için yıldız operatörünü kullanıyoruz:
+        *{
+
+        } */
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header 1</h1>
+        <h1 id="logo">Logo</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </header>
+    <h1>Header 2</h1>
+    <p class="lead info"> Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Voluptatibus, labore?</p>
+    <p class="info"> Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Voluptatibus, labore?</p>
+    <p class="info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, labore?</p>
+    <p>Test Paragraph</p>
+    <a href="#">services</a>
+</body>
+</html>
